@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/primeng/resources/primeng.css";
+@import "../node_modules/primeng/resources/themes/md-dark-indigo/theme.css";
+@import "../node_modules/primeflex/primeflex.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+    font-family: var(--font-family);
+    font-weight: normal;
+    // background: var(--surface-d);
+    background: url('./assets/bg1.svg');
+    background-size : cover;
+    background-attachment: fixed;
+    color: var(--text-color);
+    mix-blend-mode:exclusion;
+    transition : color 500ms ease-in-out;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@media (width < 850px) {
+    body {
+        background: var(--surface-e);
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity : 0;
+        transform : translateX(50px);
+    }
+    100% {
+        opacity : 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity : 0;
+        transform : translateX(-50px);
+    }
+    100% {
+        opacity : 1;
+        transform: translateX(0);
+    }
+    
+}

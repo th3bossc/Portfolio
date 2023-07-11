@@ -1,0 +1,24 @@
+.container {
+    margin-top : 100px;
+    height : 80%;
+    padding : 50px;
+    
+    .sections {
+        padding-top : 30px;
+        padding-bottom : 30px;
+        opacity : 0;
+
+        animation : fadeInRight 500ms ease-out forwards;
+        animation-delay: calc(var(--animation-delay)*100ms);
+    }
+}
+
+
+@media (width < 850px) {
+    .container {
+        padding : 30px;
+        margin-top : 0px;
+    }
+}
+
+

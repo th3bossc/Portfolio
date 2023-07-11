@@ -1,0 +1,13 @@
+@media (width < 850px) {
+    .container {
+        position: relative;
+        .heading {
+            z-index: 1000;
+            position : sticky;
+            top : 5px;
+            padding : 10px;
+            background-color: var(--surface-50);
+            border-radius: 8px;
+        }
+    }   
+}

@@ -1,0 +1,30 @@
+<div class="container">
+        <h3 class="heading"> Projects </h3>
+        <!-- <p-button icon="bi bi-arrow-right" iconPos="right" label="view all projects" styleClass="p-button-text"></p-button> -->
+    <hr>
+    <div class="projects">
+        <p-card [subheader]="project.date" [style]="{ width: '100%' }" *ngFor="let project of projects$ | async">
+            <ng-template pTemplate="title">
+                <div class="title">
+                    <a [href]="project.deployed || '#'" target="_blank">
+                        {{ project.title }}
+                        <i class="fa-solid fa-arrow-right icon"></i>
+                    </a>
+                </div>
+            </ng-template>
+            <div>
+                <p>
+                    {{ project.desc }}  
+                </p>
+                <div class="stack">
+                    <p-chip *ngFor="let chip of project.stack" [icon]="chip.icon" [label]="chip.name" [style]="{'background-color' : 'var(--indigo-300)', 'color' : 'black'}"></p-chip>
+                </div>
+            </div>
+            <ng-template pTemplate="footer">
+                <div class="links">
+                    <a pButton pRipple *ngFor="let link of project.links" [href]="link.href" target="_blank" [class]="'p-button-text ' + (link.style ? link.style : '')" > {{link.label}} </a>
+                </div>
+            </ng-template>
+        </p-card>
+    </div>
+</div>

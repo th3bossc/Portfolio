@@ -1,0 +1,70 @@
+.container {
+    .title {
+        display : flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .projects {
+        padding-top : 20px;
+        display : flex;
+        flex-direction: column;
+        gap : 10px;
+        .stack, .links {
+            display : flex;
+            flex-direction: row;
+            flex-wrap : wrap;
+            gap : 10px;
+        }
+    
+        .links {
+            justify-content: flex-start;
+            align-items: center;
+        }
+    
+    
+    }
+}
+
+:host ::ng-deep .p-card {
+    background : transparent;
+    border-radius : 8px;
+
+    .title {
+        .icon {
+            font-size : 20px;
+            transition : all 100ms;
+        }
+    }
+    @media (width >= 850px) {
+        &:hover {
+            transform: translateY(-3px);
+            transition : all 100ms;
+            background-color: var(--surface-c);
+            .title {
+                text-decoration: underline;
+                text-underline-offset: 5px;
+                .icon {
+                    transform: translateX(10px);
+                }
+            }
+        } 
+    }
+    @media (width < 850px) {
+        background-color : var(--surface-c);
+    }
+    transition : all 100ms;
+}
+
+@media (width < 850px) {
+    .container {
+        position: relative;
+        .heading {
+            z-index: 1000;
+            position : sticky;
+            top : 5px;
+            padding : 10px;
+            background-color: var(--surface-50);
+            border-radius: 8px;
+        }
+    }
+}
