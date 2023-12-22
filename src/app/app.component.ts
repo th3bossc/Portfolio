@@ -8,9 +8,9 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class AppComponent {
   title = 'portfolio';
-  constructor(private primeconfig : PrimeNGConfig) {}
-  
+  constructor(private primeconfig: PrimeNGConfig) { }
   ngOnInit() {
+    window.location.href = "https://portfolio-v2-th3bosscs-projects.vercel.app/"
     this.primeconfig.ripple = true;
   }
 }

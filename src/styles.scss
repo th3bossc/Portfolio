@@ -8,12 +8,12 @@ body {
     font-family: var(--font-family);
     font-weight: normal;
     // background: var(--surface-d);
-    background: url('./assets/bg1.svg');
-    background-size : cover;
+    // background: url('./assets/bg1.svg');
+    background-size: cover;
     background-attachment: fixed;
     color: var(--text-color);
-    mix-blend-mode:exclusion;
-    transition : color 500ms ease-in-out;
+    mix-blend-mode: exclusion;
+    transition: color 500ms ease-in-out;
 }
 
 a {
@@ -34,23 +34,25 @@ a {
 
 @keyframes fadeInRight {
     0% {
-        opacity : 0;
-        transform : translateX(50px);
+        opacity: 0;
+        transform: translateX(50px);
     }
+
     100% {
-        opacity : 1;
+        opacity: 1;
         transform: translateX(0);
     }
 }
 
 @keyframes fadeInLeft {
     0% {
-        opacity : 0;
-        transform : translateX(-50px);
+        opacity: 0;
+        transform: translateX(-50px);
     }
+
     100% {
-        opacity : 1;
+        opacity: 1;
         transform: translateX(0);
     }
-    
+
 }
